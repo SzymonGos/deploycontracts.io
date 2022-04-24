@@ -38,11 +38,11 @@ export default function AllocationCart({
 
   return (
     <div key={myKey} className='relative flex flex-col gap-y-9 bg-[#0F204D] rounded-3xl p-8'>
-      <div className='flex flex-row gap-x-[26px]'>
-        <div className='w-[85%]'>
+      <div className='flex flex-col md:flex-row gap-y-4 md:gap-x-5 lg:gap-x-[26px]'>
+        <div className='sm:w-[80%] xl:w-[85%] whitespace-nowrap'>
           <Input label='Name of your allocation' placeholder='eg. Team' />
         </div>
-        <div className='w-[15%]'>
+        <div className='sm:w-[20%] xl:w-[15%]'>
           <Input label='Value' placeholder='15%' />
         </div>
       </div>
@@ -54,7 +54,7 @@ export default function AllocationCart({
         ></div>
       )}
       {myKey === 0 ? null : (
-        <div className='absolute top-0 bottom-0 m-auto right-[-70px] w-[64px] h-[64px] hover:bg-[#242b3c] rounded-full'>
+        <div className='md:absolute md:top-0 md:bottom-0 m-auto md:right-[-70px] w-[64px] h-[64px] hover:bg-[#242b3c] rounded-full'>
           <Delete className='cursor-pointer' height={64} width={64} onClick={() => deleteAllocation(myKey)} />
         </div>
       )}
