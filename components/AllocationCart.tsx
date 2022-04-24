@@ -34,8 +34,7 @@ export default function AllocationCart({
 
   useEffect(() => {
     setColour(colourPallete.slice(count, count + 1).toString())
-    return () => setCount(0)
-  }, [counter])
+  }, [])
 
   return (
     <div key={myKey} className='relative flex flex-col gap-y-9 bg-[#0F204D] rounded-3xl p-8'>
@@ -55,7 +54,7 @@ export default function AllocationCart({
         ></div>
       )}
       <div className='absolute top-0 bottom-0 m-auto right-[-70px] w-[64px] h-[64px] hover:bg-[#242b3c] rounded-full'>
-        <Delete className='cursor-pointer' height={64} width={64} onClick={() => deleteAllocation(myKey + 1)} />
+        <Delete className='cursor-pointer' height={64} width={64} onClick={() => deleteAllocation(myKey)} />
       </div>
     </div>
   )
