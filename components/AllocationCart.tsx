@@ -53,9 +53,11 @@ export default function AllocationCart({
           style={{ backgroundColor: colour }}
         ></div>
       )}
-      <div className='absolute top-0 bottom-0 m-auto right-[-70px] w-[64px] h-[64px] hover:bg-[#242b3c] rounded-full'>
-        <Delete className='cursor-pointer' height={64} width={64} onClick={() => deleteAllocation(myKey)} />
-      </div>
+      {myKey === 0 ? null : (
+        <div className='absolute top-0 bottom-0 m-auto right-[-70px] w-[64px] h-[64px] hover:bg-[#242b3c] rounded-full'>
+          <Delete className='cursor-pointer' height={64} width={64} onClick={() => deleteAllocation(myKey)} />
+        </div>
+      )}
     </div>
   )
 }
