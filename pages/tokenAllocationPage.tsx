@@ -7,7 +7,7 @@ export default function tokenAllocationPage() {
   const [allocations, setAllocations] = useState([0])
   const [counter, setCounter] = useState(0)
 
-  const addAllocation = () => {
+  function addAllocation() {
     setCounter((prev) => (prev === 14 ? 0 : prev + 1))
     let lastItem = allocations.slice(-1).toString()
     setAllocations([...allocations, parseInt(lastItem) + 1])

@@ -1,4 +1,4 @@
-export default function SecondaryButton({ title, addAllocation }: { title: string; addAllocation: any }) {
+export default function SecondaryButton({ title, addAllocation }: { title: string; addAllocation?: any }) {
   return (
     <button
       onClick={() => addAllocation()}
